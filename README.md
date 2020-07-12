@@ -12,7 +12,7 @@ In your `pubspec.yaml`:
 
 ```yaml  
 dependencies:  
-    listentocontacts: ^0.0.1
+    listentocontacts: ^0.0.1+2
 ``` 
 
 ### Add the required permissions in the AndroidManifest.xml and Info.plist file

@@ -1,6 +1,6 @@
 name: listentocontacts
 description: Listen to changes to the user's contacts
-version: 0.0.1
+version: 0.0.1+2
 repository: https://github.com/Ben-Baert/flutter_listentocontacts
 
 environment:
