@@ -8,6 +8,8 @@ It uses a `ContentObserver` in Android and the `NotificationCenter` in iOS.
 
 ### Install the plugin
 
+In your `pubspec.yaml`:
+
 ```yaml  
 dependencies:  
     listentocontacts: ^0.0.1
@@ -49,10 +51,12 @@ final PermissionStatus permissionStatus = await _getPermission();
 
 ```
 
-- Initialise the listener
+### Initialise the listener
+```dart
 Listentocontacts().onContactsChanged.listen((_) {
       // do what you want to do here when your contacts have changed
     });
+```
 
 Note that this plugin does not query your contacts. You can use one of the other available packages for this.
 
