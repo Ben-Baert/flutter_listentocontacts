@@ -1,6 +1,6 @@
 name: listentocontacts
 description: Listen to changes to the user's contacts. This uses a ContentObserver on Android and a NotificationCenter observer on iOS.
-version: 0.0.1+4
+version: 0.0.1+5
 homepage: https://github.com/Ben-Baert/flutter_listentocontacts
 repository: https://github.com/Ben-Baert/flutter_listentocontacts
 

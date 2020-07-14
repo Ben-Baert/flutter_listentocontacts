@@ -2,7 +2,11 @@
 
 This plugin allows you to listen to changes to the user's contacts.
 
-It uses a `ContentObserver` in Android and the `NotificationCenter` in iOS.
+It uses a `ContentObserver` in Android and the `NotificationCenter` observer in iOS.
+
+It does **not** tell you what contact has been added/edited/deleted. It only tells you that some change has been made to the cotacts.
+
+If you want to know what change has been made, then you will have to query the contacts yourself. You may also need to maintain a copy in a local database to compare to.
 
 ## Getting Started
 
@@ -12,16 +16,19 @@ In your `pubspec.yaml`:
 
 ```yaml  
 dependencies:  
-    listentocontacts: ^0.0.1+3
+    listentocontacts: ^0.0.1+5
 ``` 
 
-### Add the required permissions in the AndroidManifest.xml and Info.plist file
+### Add the required permissions
 
+#### AndroidManifest.xml
 
 ```xml  
 <uses-permission android:name="android.permission.READ_CONTACTS" />  
 <uses-permission android:name="android.permission.WRITE_CONTACTS" />  
 ```  
+
+#### Info.plist
 
 ```xml  
 <key>NSContactsUsageDescription</key>  
@@ -31,7 +38,7 @@ dependencies:
 
 ### Ask for permission
 
-This example uses [permission_handler](https://pub.dartlang.org/packages/permission_handler) but you can do this however you want.
+This example uses [permission_handler](https://pub.dartlang.org/packages/permission_handler), but you can do this however you want.
 
 ```dart
 Future<PermissionStatus> _getPermission() async {
@@ -58,7 +65,6 @@ Listentocontacts().onContactsChanged.listen((_) {
     });
 ```
 
-Note that this plugin does not query your contacts. You can use one of the other available packages for this.
 
 For help getting started with Flutter, view our 
 [online documentation](https://flutter.dev/docs), which offers tutorials, 

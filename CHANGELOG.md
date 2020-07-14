@@ -13,3 +13,7 @@
 ## 0.0.1+4
 
 - Documentation added
+
+## 0.0.1+5
+
+- Updated README.md
